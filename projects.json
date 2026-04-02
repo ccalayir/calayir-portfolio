@@ -3,7 +3,7 @@
     "title": "ESHOT Durak Takip ve Bilgi Sistemi Sim ̈ulasyonu",
     "description": "Express.js kullanılarak geliştirilmiş, RESTful prensiplerine uygun, statik JSON verileri üzerinden dinamik rotalar oluşturan ve front-end entegrasyonu sağlanan API projesi.",
     "tag": "backend",
-    "image": "foto1.jpg",
+    "image": "assets/photos/foto1.jpg",
     "github": "https://github.com/ccalayir/otobus-duraklari"
     
   },
@@ -12,7 +12,7 @@
     "title": "İzmir İtfaiyesi Vaka ve Durum Analizi",
     "description": "İzmir İtfaiyesi'nin arama kurtarma ve trafik kazası müdahale verileri incelenerek müdahale süreleri analiz edilmiş ve makine  öğrenmesi teknikleriyle varış süresi tahmin modeli geliştirilmiştir.",
     "tag": "veri bilimi",
-    "image": "foto2.jpg",
+    "image": "assets/photos/foto2.jpg",
     "github": "https://github.com/ccalayir/izmir-itfaiye-veri-analizi"
     
   },
@@ -21,7 +21,7 @@
     "title": "A-Star Algoritması ile İzmir Su Dağıtım Ağı Optimizasyonu",
     "description": "Bu proje, Yapay Zekâ dersi kapsamında geliştirilmiştir. Çalışmanın temel amacı, İzmir metropol alanının su dağıtım şebekesini bir arama problemi olarak modellemek ve A* (A-Star) algoritmasını kullanarak suyu en düşük maliyetle hedefe ulaştırmaktır. Günümüzde su kaynakları yönetiminin, mesafe ve yükseklik farkları gibi nedenlerle ciddi bir işletme maliyeti oluşturması problemi, bu çalışmanın çıkış noktasını oluşturmaktadır.",
     "tag": "algoritma",
-    "image": "foto3.jpg",
+    "image": "assets/photos/foto3.jpg",
     "github": "https://github.com/ccalayir/a-star-projesi"
     
   },
@@ -30,7 +30,7 @@
     "title": "N Tuttu - Gelir/Gider Takip Uygulaması",
     "description": "Günlük gelir ve giderlerinizi takvim üzerinden kolayca takip edebileceğiniz, Flutter ile geliştirilmiş modern bir kişisel finans uygulaması.",
     "tag": "mobil programlama",
-    "image": "ntuttu.png",
+    "image": "assets/photos/ntuttu.png",
     "github": "https://github.com/ccalayir/n-tuttu-uygulamasi"
     
   }

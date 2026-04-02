@@ -24,3 +24,29 @@ fetch('projects.json')
         });
     })
     .catch(error => console.error('Veri çekilirken hata oluştu:', error));
+
+
+fetch('skills.json')
+    .then(response => response.json())
+    .then(data => {
+        const skillsContainer = document.getElementById('skills-container');
+        
+        data.forEach(group => {
+            const groupHTML = `
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card">
+                        <h5 class="skill-title mb-3">${group.category}</h5>
+                        <ul class="skill-list">
+                            ${group.items.map(item => `
+                                <li class="skill-item">
+                                    <i class="bi bi-check2-circle"></i>${item}
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+            skillsContainer.innerHTML += groupHTML;
+        });
+    })
+    .catch(error => console.error('Skills yüklenirken hata:', error));

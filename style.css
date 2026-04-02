@@ -102,7 +102,77 @@ body {
     border-color: rgba(255,255,255,0.5) !important; /* Kenarlığı belirginleşir */
 }
 
-/* CARD DENEME */
+/* YETKINLIK KISMI */
+/* Daha spesifik hedefleme yapalım */
+.hea-2{
+    color: var(--primary-color) !important;
+    font-weight: 800;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 15px;
+    display: block; /* Bazı durumlarda hiza için gerekebilir */
+}
+
+/* Alt çizgi (Turkuaz bar) */
+.hea-2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color) !important;
+    border-radius: 2px;
+}
+
+.skill-card {
+    background-color: #ffffff;
+    border-top: 5px solid var(--secondary-color) !important;
+    padding: 1.8rem !important;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    
+    /* Kartların hepsini aynı boya zorlayan sihirli dokunuş */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-title {
+    color: var(--primary-color);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #eee; /* Başlığın altına ince bir çizgi */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.skill-list {
+    flex-grow: 1;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.skill-item i {
+    color: var(--accent-color); /* Turkuaz ikonun */
+    font-size: 1.1rem;
+    margin-right: 12px;
+    flex-shrink: 0; /* İkonun yamulmasını engeller */
+}
+
+/* CARD */
 /* Kartların üzerine gelince hafifçe yükselmesi (Premium hissi) */
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -170,3 +240,4 @@ footer {
     font-size: 0.85rem;
     color: #6c757d;
 }
+

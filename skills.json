@@ -1,0 +1,18 @@
+[
+  {
+    "category": "Frontend",
+    "items": ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Flutter"]
+  },
+  {
+    "category": "Backend & Veritabanı",
+    "items": ["Python", "Django", "Node.js", "Express.js", "PostgreSQL", "MongoDB"]
+  },
+  {
+    "category": "Veri Bilimi ve Yapay Zeka",
+    "items": ["Makine Öğrenmesi", "Derin Öğrenme", "Doğal Dil İşleme", "Tensorflow", "Pandas", "Veri Bilimi"]
+  },
+  {
+    "category": "Önemli Araçlar",
+    "items": ["Git", "Linux (CachyOS)", "Bash Scripting", "VirtualBox"]
+  }
+]
