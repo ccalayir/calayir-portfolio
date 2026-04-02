@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Bootstrap CSS (Head içine) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- CSS Bağlantısı -->
+  <link rel="stylesheet" href="style.css">
+
+    <!-- JS Bağlantısı -->
+  <script src="script.js"></script>
+
+  <!-- Lora Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+  <!-- Montserrat Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <!-- Sol taraf: Logo/İsim -->
+      <a class="navbar-brand fw-bold" href="#">Çağdaş Çalayır</a>
+  
+      <!-- Mobil Menü Butonu (Hamburger) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Sağ taraf: Linkler -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Ana Sayfa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Hakkımda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Yetkinlikler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projeler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">İletişim</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Hakkımda Kısmı -->
+  <section id="about" class="d-flex align-items-center justify-content-center text-center py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Üst Tanıtım Yazısı -->
+                <p class="lead mb-4">Merhaba, ben Çağdaş. Modern web teknolojileri ile kullanıcı dostu arayüzler geliştiriyorum.</p>
+                
+                <!-- Orta Kısımdaki Görsel (Çizimindeki kutu) -->
+                <div class="my-5">
+                    <img src="pp.jpeg" alt="Çağdaş Çalayır" class="img-fluid rounded-circle shadow-lg profile-img" style="width: 350px; height: 350px; object-fit: cover; border: 8px solid rgba(255,255,255,0.2);">
+                </div>
+
+                <!-- Alt Detay Yazısı -->
+                <p class="mb-0">
+                    Bilişim Sistemleri Mühendisliği 3. sınıf  ̈oğrencisi olarak, Python tabanlı veri bilimi, Node.js ile back-end, Flutter ile mobil programlama alanlarında gerçek hayat sorunlarına  ̧cözüm üreten projeler geliştiriyorum. Teknik yetkinliklerimi uzaktan ve yüzyüze katıldığım kapsamlı eğitimlerle aldığım sertifikalarla destekleyerek, teorik bilgimi pratik uygulamalara dönüştürmeye odaklanıyorum. Zorunlu staj dönemimde dinamik projelere katkı sağlamayı ve profesyonel iş disiplinini kazanmayı hedefliyorum.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+</section>
+
+    <section id="projects" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Projelerim</h2>
+        <div id="projects-container" class="row g-4">
+            </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-5 mt-5">
+    <div class="container text-center">
+        <h3 class="footer-title">İletişimde Kalalım</h3>
+        <p class="footer-text">
+            Yeni projeler, iş birlikleri veya sadece merhaba demek için bana ulaşabilirsin.
+        </p>
+        
+        <!-- Sosyal Medya İkonları -->
+        <div class="social-links d-flex justify-content-center gap-4 my-4">
+            <a href="https://github.com/ccalayir" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/%C3%A7a%C4%9Fda%C5%9F-%C3%A7alay%C4%B1r-6b278a2a3/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:cagdascalayir@outlook.com.tr"><i class="bi bi-envelope-at-fill"></i></a>
+        </div>
+        
+        <div class="footer-divider"></div>
+        
+        <p class="copyright">
+    2026 — <strong>Çağdaş Çalayır</strong> tarafından <i class="bi bi-heart-fill text-danger"></i> ile hazırlandı.
+</p>
+    </div>
+</footer>
+
+
+  
+  <!-- Bootstrap JS (Body sonuna) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+</body>
+</html>

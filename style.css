@@ -1,0 +1,172 @@
+:root {
+    --primary-color: #092327;    /* Ana vurgu rengin (Navbar, Butonlar) */
+    --secondary-color: #0B5351;  /* İkincil renk (Etiketler, İkonlar) */
+    --bg-color: #90C2E7;         /* Sayfa arka planı */
+    --text-color: #212529;       /* Ana metin rengi */
+    --accent-color: #00A9A5;     /* Yardımcı çizgiler veya pasif metinler */
+}
+
+
+
+
+/* --FONTS-- */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color); /* Daha önce tanımladığın değişken */
+}
+
+.navbar-brand {
+    font-style: italic;
+    letter-spacing: 1px; /* Harf aralarını biraz açmak klaslığı artırır */
+    text-transform: uppercase; /* İsim büyük harf olursa daha resmi durur */
+}
+
+
+h1, h2, h3, .navbar-brand {
+    color: var(--primary-color) !important;
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+}
+
+body, p, a, .btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Günlük yazı için normal kalınlık */
+    line-height: 1.6; /* Satır aralığını biraz açmak okumayı kolaylaştırır */
+}
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* Linklerin biraz daha belirgin olması için yarı kalın */
+    font-size: 0.9rem;
+    text-transform: uppercase; /* Modern bir görünüm için büyük harf */
+}
+
+/* --COLORS-- */
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: #ffffff !important; /* Beyaz Arka Plan */
+    border-bottom: 1px solid #e0e0e0; /* Çok ince bir ayrım çizgisi klaslığı artırır */
+}
+
+/* -- HERO SECTION HAKKIMDA -- */
+#about {
+    min-height: 80vh; /* Sayfanın büyük bir kısmını kaplaması için */
+    padding: 100px 0;
+}
+
+#about p.lead {
+    font-family: 'Playfair Display', serif; /* Karizmatik başlık fontun */
+    font-size: 2.2rem;
+    color: var(--text-color);
+}
+
+#about p:not(.lead) {
+    font-family: 'Montserrat', sans-serif; /* Günlük fontun */
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto; /* Metni ortalar */
+}
+
+/* Fotoğrafın etrafındaki o "kutu" hissi için */
+#about img {
+    transition: transform 0.3s ease;
+}
+
+#about img:hover {
+    transform: scale(1.05); /* Üzerine gelince hafifçe büyür */
+}
+
+/* mobil cihazlarda taşmaması için media query */
+@media (max-width: 576px) {
+    .profile-img {
+        width: 200px !important;
+        height: 200px !important;
+    }
+}
+
+.profile-img {
+    transition: all 0.4s ease; /* Yumuşak geçiş için */
+}
+
+.profile-img:hover {
+    transform: scale(1.05); /* %5 büyür */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3) !important; /* Gölgesi derinleşir */
+    border-color: rgba(255,255,255,0.5) !important; /* Kenarlığı belirginleşir */
+}
+
+/* CARD DENEME */
+/* Kartların üzerine gelince hafifçe yükselmesi (Premium hissi) */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+/* Butonun üzerine gelince senin o sevdiğin renge bürünmesi */
+.btn-outline-dark:hover {
+    background-color: var(--bg-color) !important; /* Seçtiğin turkuaz */
+    border-color: var(--bg-color) !important;
+    color: white !important;
+}
+
+/* Başlıkların daha net ayrışması için */
+.card-title {
+    line-height: 1.4;
+    min-height: 3rem; /* Başlıklar 2 satır olsa bile hizayı bozmaz */
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1a1a1a; /* Çok koyu antrasit, siyahın asaletini verir */
+    color: #ffffff;
+    border-top: 4px solid var(--bg-color); /* En üste senin turkuazından ince bir çizgi */
+}
+
+.footer-title {
+    font-family: 'Playfair Display', serif;
+    color: #ffffff !important; /* Başlığı beyaz yapalım ki parlasın */
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.footer-text {
+    font-family: 'Montserrat', sans-serif;
+    color: #adb5bd; /* Hafif gri yapalım ki göz yormasın */
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.social-links a {
+    color: #ffffff;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+/* İşte burası turkuazın parlayacağı yer */
+.social-links a:hover {
+    color: var(--bg-color) !important; /* Üstüne gelince senin rengin olsun */
+    transform: translateY(-5px);
+}
+
+.footer-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #333, transparent);
+    margin: 30px 0;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: #6c757d;
+}

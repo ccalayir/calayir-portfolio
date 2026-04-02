@@ -1,0 +1,14 @@
+-- Fonts --
+h1, h2, h3, .navbar-brand -> Lora Font
+body, p, a, .nav-link, .btn -> Montserrat
+
+-- Colors --
+    --primary-color: #092327;    /* Ana vurgu rengin (Navbar, Butonlar) */
+    --secondary-color: #0B5351;  /* İkincil renk (Etiketler, İkonlar) */
+    --bg-color: #90C2E7;         /* Sayfa arka planı */
+    --text-color: #212529;       /* Ana metin rengi */
+    --accent-color: #00A9A5;     /* Yardımcı çizgiler veya pasif metinler */
+
+projeleri tuttugum bir projects.json dosyası var.
+
+Kartların img boyutları: height:350px

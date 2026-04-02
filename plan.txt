@@ -1,0 +1,31 @@
+HTML Yapısı (Semantic DOM)
+
+Sayfanı kurarken tarayıcının yapıyı anlaması için şu hiyerarşiyi kullanmanı öneririm:
+
+    Header & Nav: Logo ve linkler için.
+
+    Main (Hero Section): Kendini tanıtan yazı ve profil fotoğrafın.
+
+    Section (Skills): Yetkinliklerini listeleyeceğin alan.
+
+    Section (Projects): Kart yapılarının bulunacağı ana konteyner.
+
+    Footer: İletişim linkleri ve sosyal medya.
+
+CSS Flexbox/Grid: Kart yapısı için CSS Grid kullanmanı öneririm. grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); komutuyla, kartlarının ekran boyutuna göre otomatik olarak alt alta geçmesini (responsive) sağlayabilirsin.
+
+Sektörde buna genellikle "Data-driven UI" (Veri güdümlü arayüz) diyoruz. Sen HTML yapını bir kez kurarsın, JavaScript gidip o JSON dosyasını okur ve kaç tane proje varsa o kadar kartı otomatik oluşturur.
+Neden JSON Kullanmalısın?
+
+    Bakım Kolaylığı: HTML içinde 10 tane ayrı kart koduyla uğraşmak yerine, sadece bir JSON dosyasında yeni bir nesne ekleyip çıkarmak saniyelerini alır.
+
+    Temiz Kod: HTML dosyan yüzlerce satır yerine sadece boş bir kapsayıcı (<div id="projects-container"></div>) barındırır.
+
+    Gerçek Dünya Pratiği: Profesyonel hayatta veriler her zaman bir API'den veya JSON formatında gelir. Bu yöntem sana gerçek bir tecrübe kazandırır.
+
+    JavaScript ile Veriyi Çekmek (Fetch API):
+Modern JavaScript'te fetch() fonksiyonunu kullanarak bu dosyayı okuyabilirsin. Bu noktada "Asynchronous (Asenkron) JavaScript" kavramıyla tanışacaksın.
+
+    DOM'a Basmak (Template Literals):
+Gelen veriyi bir forEach döngüsüne sokup, her bir proje için HTML "string"i oluşturup sayfaya enjekte edebilirsin.
+
