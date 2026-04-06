@@ -1,9 +1,9 @@
 [
   {
-    "title": "ESHOT Durak Takip ve Bilgi Sistemi Sim ̈ulasyonu",
-    "description": "Express.js kullanılarak geliştirilmiş, RESTful prensiplerine uygun, statik JSON verileri üzerinden dinamik rotalar oluşturan ve front-end entegrasyonu sağlanan API projesi.",
-    "tag": "backend",
-    "image": "assets/photos/foto1.jpg",
+    "title": "ESHOT Durak Takip ve Bilgi Sistemi",
+    "description": "Bu proje, İzmir Büyükşehir Belediyesi (ESHOT) açık veri servislerini kullanarak geliştirilmiş; durak bazlı canlı otobüs takibi, harita entegrasyonu ve tahmini varış süresi hesaplayan bir Full-Stack web uygulamasıdır.",
+    "tag": "full-stack",
+    "image": "assets/photos/eshot-durak.png",
     "github": "https://github.com/ccalayir/otobus-duraklari"
     
   },
