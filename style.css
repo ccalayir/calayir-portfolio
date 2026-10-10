@@ -1,122 +1,107 @@
 :root {
-    --primary-color: #092327;    /* Ana vurgu rengin (Navbar, Butonlar) */
-    --secondary-color: #0B5351;  /* İkincil renk (Etiketler, İkonlar) */
-    --bg-color: #90C2E7;         /* Sayfa arka planı */
+    --primary-color: #092327;    /* Ana vurgu rengi (başlıklar) */
+    --secondary-color: #0B5351;  /* İkincil renk (kart çizgileri, buton hover) */
+    --bg-color: #90C2E7;         /* Sayfa arka planı (açık mavi) */
     --text-color: #212529;       /* Ana metin rengi */
-    --accent-color: #00A9A5;     /* Yardımcı çizgiler veya pasif metinler */
+    --accent-color: #00A9A5;     /* Turkuaz: başlık alt çizgisi, ikonlar */
+    --navbar-height: 64px;       /* Menüden bölüme atlarken başlık navbar altında kalmasın */
 }
 
+/* --GENEL-- */
 
-
-
-/* --FONTS-- */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--navbar-height);
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: var(--text-color); /* Daha önce tanımladığın değişken */
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: 'Lora', serif;
+    color: var(--primary-color);
+}
+
+/* --NAVBAR-- */
+
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .navbar-brand {
-    font-style: italic;
-    letter-spacing: 1px; /* Harf aralarını biraz açmak klaslığı artırır */
-    text-transform: uppercase; /* İsim büyük harf olursa daha resmi durur */
-}
-
-
-h1, h2, h3, .navbar-brand {
-    color: var(--primary-color) !important;
-    font-family: 'Lora', serif;
     font-size: 1.5rem;
-}
-
-body, p, a, .btn {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400; /* Günlük yazı için normal kalınlık */
-    line-height: 1.6; /* Satır aralığını biraz açmak okumayı kolaylaştırır */
+    font-style: italic;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .nav-link {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600; /* Linklerin biraz daha belirgin olması için yarı kalın */
+    font-weight: 600;
     font-size: 0.9rem;
-    text-transform: uppercase; /* Modern bir görünüm için büyük harf */
-}
-
-/* --COLORS-- */
-
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
-
-.navbar {
-    background-color: #ffffff !important; /* Beyaz Arka Plan */
-    border-bottom: 1px solid #e0e0e0; /* Çok ince bir ayrım çizgisi klaslığı artırır */
+    text-transform: uppercase;
 }
 
 /* -- HERO SECTION HAKKIMDA -- */
+
 #about {
-    min-height: 80vh; /* Sayfanın büyük bir kısmını kaplaması için */
-    padding: 100px 0;
+    padding: 3rem 0;
 }
 
-#about p.lead {
-    font-family: 'Lora', serif; /* Karizmatik başlık fontun */
-    font-size: 2.2rem;
-    color: var(--text-color);
-}
-
-#about p:not(.lead) {
-    font-family: 'Montserrat', sans-serif; /* Günlük fontun */
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto; /* Metni ortalar */
-}
-
-/* Fotoğrafın etrafındaki o "kutu" hissi için */
-#about img {
-    transition: transform 0.3s ease;
-}
-
-#about img:hover {
-    transform: scale(1.05); /* Üzerine gelince hafifçe büyür */
-}
-
-/* mobil cihazlarda taşmaması için media query */
-@media (max-width: 576px) {
-    .profile-img {
-        width: 200px !important;
-        height: 200px !important;
+/* Büyük ekranda ekranın çoğunu kaplasın, mobilde gereksiz boşluk olmasın */
+@media (min-width: 992px) {
+    #about {
+        min-height: 80vh;
+        padding: 100px 0;
     }
 }
 
+/* clamp(en küçük, tercih edilen, en büyük): ekran daraldıkça yazı küçülür */
+.hero-title {
+    font-size: clamp(1.5rem, 1rem + 2.5vw, 2.2rem);
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.hero-text {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .profile-img {
-    transition: all 0.4s ease; /* Yumuşak geçiş için */
+    width: clamp(200px, 60vw, 350px);
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 8px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
 .profile-img:hover {
-    transform: scale(1.05); /* %5 büyür */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3) !important; /* Gölgesi derinleşir */
-    border-color: rgba(255,255,255,0.5) !important; /* Kenarlığı belirginleşir */
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* YETKINLIK KISMI */
-/* Daha spesifik hedefleme yapalım */
-.hea-2{
-    color: var(--primary-color) !important;
+/* -- BÖLÜM BAŞLIKLARI -- */
+
+.section-title {
     font-weight: 800;
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 1.2rem + 3vw, 2.5rem);
     text-align: center;
     margin-bottom: 3rem;
     position: relative;
     padding-bottom: 15px;
-    display: block; /* Bazı durumlarda hiza için gerekebilir */
 }
 
-/* Alt çizgi (Turkuaz bar) */
-.hea-2::after {
+/* Alt çizgi (turkuaz bar) */
+.section-title::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -124,96 +109,110 @@ body {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background-color: var(--accent-color) !important;
+    background-color: var(--accent-color);
     border-radius: 2px;
 }
 
+/* -- YETKİNLİK KARTLARI -- */
+
 .skill-card {
     background-color: #ffffff;
-    border-top: 5px solid var(--secondary-color) !important;
-    padding: 1.8rem !important;
+    border-top: 5px solid var(--secondary-color);
+    padding: 1.8rem;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    
-    /* Kartların hepsini aynı boya zorlayan sihirli dokunuş */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+
+    /* Kartların hepsini aynı boya zorlar */
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .skill-title {
-    color: var(--primary-color);
-    font-family: 'Lora', serif;
     font-weight: 700;
     font-size: 1.2rem;
-    border-bottom: 1px solid #eee; /* Başlığın altına ince bir çizgi */
+    border-bottom: 1px solid #eee;
     padding-bottom: 10px;
     margin-bottom: 15px;
 }
 
 .skill-list {
     flex-grow: 1;
+    list-style: none;
+    padding-left: 0;
 }
 
 .skill-item {
     display: flex;
     align-items: center;
     margin-bottom: 12px;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 0.95rem;
-    color: var(--text-color);
 }
 
 .skill-item i {
-    color: var(--accent-color); /* Turkuaz ikonun */
+    color: var(--accent-color);
     font-size: 1.1rem;
     margin-right: 12px;
     flex-shrink: 0; /* İkonun yamulmasını engeller */
 }
 
-/* CARD */
-/* Kartların üzerine gelince hafifçe yükselmesi (Premium hissi) */
+/* -- PROJE KARTLARI -- */
+
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Butonun üzerine gelince senin o sevdiğin renge bürünmesi */
-.btn-outline-dark:hover {
-    background-color: var(--bg-color) !important; /* Seçtiğin turkuaz */
-    border-color: var(--bg-color) !important;
-    color: white !important;
+.project-img {
+    height: 250px;
+    object-fit: cover;
 }
 
-/* Başlıkların daha net ayrışması için */
+@media (min-width: 768px) {
+    .project-img {
+        height: 350px;
+    }
+}
+
 .card-title {
+    font-size: 1.25rem;
     line-height: 1.4;
     min-height: 3rem; /* Başlıklar 2 satır olsa bile hizayı bozmaz */
     margin-bottom: 15px;
 }
 
-/* FOOTER */
-footer {
-    background-color: #1a1a1a; /* Çok koyu antrasit, siyahın asaletini verir */
+.project-desc {
+    font-size: 0.9rem;
+}
+
+/* Koyu yeşil zemin + beyaz yazı: okunur kontrast */
+.btn-outline-dark:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
     color: #ffffff;
-    border-top: 4px solid var(--bg-color); /* En üste senin turkuazından ince bir çizgi */
+}
+
+/* -- FOOTER -- */
+
+footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-top: 4px solid var(--bg-color);
 }
 
 .footer-title {
-    font-family: 'Lora', serif;
-    color: #ffffff !important; /* Başlığı beyaz yapalım ki parlasın */
+    color: #ffffff;
     font-size: 2rem;
     margin-bottom: 15px;
 }
 
 .footer-text {
-    font-family: 'Montserrat', sans-serif;
-    color: #adb5bd; /* Hafif gri yapalım ki göz yormasın */
+    color: #adb5bd;
     max-width: 500px;
     margin: 0 auto;
 }
@@ -221,12 +220,12 @@ footer {
 .social-links a {
     color: #ffffff;
     font-size: 1.8rem;
-    transition: all 0.3s ease;
+    display: inline-block; /* transform'un çalışması için */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* İşte burası turkuazın parlayacağı yer */
 .social-links a:hover {
-    color: var(--bg-color) !important; /* Üstüne gelince senin rengin olsun */
+    color: var(--bg-color);
     transform: translateY(-5px);
 }
 
@@ -238,6 +237,11 @@ footer {
 
 .copyright {
     font-size: 0.85rem;
-    color: #6c757d;
+    color: #8b949e;
 }
 
+/* Hareket hassasiyeti olan kullanıcılar için animasyonları kapat */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .card, .profile-img, .social-links a { transition: none; }
+}

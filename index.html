@@ -4,37 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Çağdaş Çalayır</title>
-  <!-- Bootstrap CSS (Head içine) -->
+  <meta name="description" content="Çağdaş Çalayır – Bilişim Sistemleri Mühendisliği öğrencisi. Veri bilimi, back-end ve mobil programlama projeleri.">
+
+  <!-- Paylaşım önizlemesi (LinkedIn, WhatsApp vb.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Çağdaş Çalayır | Portfolyo">
+  <meta property="og:description" content="Bilişim Sistemleri Mühendisliği öğrencisi. Veri bilimi, back-end ve mobil programlama projeleri.">
+  <meta property="og:url" content="https://ccalayir.github.io/calayir-portfolio/">
+  <meta property="og:image" content="https://ccalayir.github.io/calayir-portfolio/assets/photos/og-pp.jpg">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Bootstrap Icons CDN -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-  <!-- CSS Bağlantısı -->
-  <link rel="stylesheet" href="style.css">
-
-    <!-- JS Bağlantısı -->
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <!-- Fontlar: Lora (başlıklar) + Montserrat (metin) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@400..800&display=swap" rel="stylesheet">
+
+  <!-- CSS Bağlantısı -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JS Bağlantısı (defer: sayfa yüklendikten sonra çalışır) -->
+  <script src="script.js" defer></script>
 </head>
 <body>
-  
-  
+
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
     <div class="container">
       <!-- Sol taraf: Logo/İsim -->
       <a class="navbar-brand fw-bold" href="#">Çağdaş Çalayır</a>
-  
+
       <!-- Mobil Menü Butonu (Hamburger) -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü aç/kapat">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
+
       <!-- Sağ taraf: Linkler -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
@@ -58,85 +69,76 @@
     </div>
   </nav>
 
-  <!-- Hero Hakkımda Kısmı -->
-  <section id="about" class="d-flex align-items-center justify-content-center text-center py-5">
-    <div class="container">
+  <main>
+    <!-- Hero Hakkımda Kısmı -->
+    <section id="about" class="d-flex align-items-center justify-content-center text-center">
+      <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <!-- Üst Tanıtım Yazısı -->
-                <p class="lead mb-4">Merhaba, ben Çağdaş. Bilişim Sistemleri Mühendisliği öğrencisiyim.</p>
-                
-                <!-- Orta Kısımdaki Görsel (Çizimindeki kutu) -->
-                <div class="my-5">
-                    <img src="assets/photos/pp.webp" alt="Çağdaş Çalayır" class="img-fluid rounded-circle shadow-lg profile-img" style="width: 350px; height: 350px; object-fit: cover; border: 8px solid rgba(255,255,255,0.2);">
-                </div>
+          <div class="col-lg-8">
+            <!-- Üst Tanıtım Yazısı -->
+            <h1 class="hero-title mb-4">Merhaba, ben Çağdaş. Bilişim Sistemleri Mühendisliği öğrencisiyim.</h1>
 
-                <!-- Alt Detay Yazısı -->
-                <p class="mb-0">
-                    Bilişim Sistemleri Mühendisliği 3. sınıf öğrencisi olarak, Python tabanlı veri bilimi, Node.js ile back-end, Flutter ile mobil programlama alanlarında gerçek hayat sorunlarına çözüm üreten projeler geliştiriyorum. Teknik yetkinliklerimi uzaktan ve yüzyüze katıldığım kapsamlı eğitimlerle aldığım sertifikalarla destekleyerek, teorik bilgimi pratik uygulamalara dönüştürmeye odaklanıyorum. Zorunlu staj dönemimde dinamik projelere katkı sağlamayı ve profesyonel iş disiplinini kazanmayı hedefliyorum.
-                </p>
+            <!-- Orta Kısımdaki Görsel -->
+            <div class="my-5">
+              <img src="assets/photos/pp.webp" alt="Çağdaş Çalayır" width="700" height="933"
+                   class="rounded-circle shadow-lg profile-img" fetchpriority="high">
             </div>
+
+            <!-- Alt Detay Yazısı -->
+            <p class="hero-text mb-0">
+              Bilişim Sistemleri Mühendisliği 3. sınıf öğrencisi olarak, Python tabanlı veri bilimi, Node.js ile back-end, Flutter ile mobil programlama alanlarında gerçek hayat sorunlarına çözüm üreten projeler geliştiriyorum. Teknik yetkinliklerimi uzaktan ve yüzyüze katıldığım kapsamlı eğitimlerle aldığım sertifikalarla destekleyerek, teorik bilgimi pratik uygulamalara dönüştürmeye odaklanıyorum. Zorunlu staj dönemimde dinamik projelere katkı sağlamayı ve profesyonel iş disiplinini kazanmayı hedefliyorum.
+            </p>
+          </div>
         </div>
-    </div>
-    
+      </div>
+    </section>
 
-</section>
-
-
-
-<!-- YETKINLIKLER KISMI -->
-<!-- Class isminin tam olarak 'skills-section' olduğundan emin ol -->
-<section id="skills" class="py-5 skills-section">
-    <div class="container">
-      
-        <h2 class="hea-2">Yetkinliklerim</h2>
+    <!-- YETKINLIKLER KISMI -->
+    <section id="skills" class="py-5">
+      <div class="container">
+        <h2 class="section-title">Yetkinliklerim</h2>
         <div id="skills-container" class="row g-4 justify-content-center">
-            <!-- JS ile dolacak -->
+          <!-- JS ile dolacak (skills.json) -->
         </div>
-        
-    </div>
-</section>
+      </div>
+    </section>
 
-
-
-<!-- PROJELER KART KISMI -->
+    <!-- PROJELER KART KISMI -->
     <section id="projects" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-5 hea-2">Projelerim</h2>
+      <div class="container">
+        <h2 class="section-title">Projelerim</h2>
         <div id="projects-container" class="row g-4">
-            </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer id="contact" class="py-5 mt-5">
-    <div class="container text-center">
-        <h3 class="footer-title">İletişimde Kalalım</h3>
-        <p class="footer-text">
-            Yeni projeler, iş birlikleri veya sadece merhaba demek için bana ulaşabilirsin.
-        </p>
-        
-        <!-- Sosyal Medya İkonları -->
-        <div class="social-links d-flex justify-content-center gap-4 my-4">
-            <a href="https://github.com/ccalayir" target="_blank"><i class="bi bi-github"></i></a>
-            <a href="https://www.linkedin.com/in/%C3%A7a%C4%9Fda%C5%9F-%C3%A7alay%C4%B1r-6b278a2a3/" target="_blank"><i class="bi bi-linkedin"></i></a>
-            <a href="mailto:cagdascalayir@outlook.com.tr"><i class="bi bi-envelope-at-fill"></i></a>
+          <!-- JS ile dolacak (projects.json) -->
         </div>
-        
-        <div class="footer-divider"></div>
-        
-        <p class="copyright">
-    2026 — <strong>Çağdaş Çalayır</strong> tarafından <i class="bi bi-heart-fill text-danger"></i> ile hazırlandı.
-</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="py-5 mt-5">
+    <div class="container text-center">
+      <h2 class="footer-title">İletişimde Kalalım</h2>
+      <p class="footer-text">
+        Yeni projeler, iş birlikleri veya sadece merhaba demek için bana ulaşabilirsin.
+      </p>
+
+      <!-- Sosyal Medya İkonları -->
+      <div class="social-links d-flex justify-content-center gap-4 my-4">
+        <a href="https://github.com/ccalayir" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/%C3%A7a%C4%9Fda%C5%9F-%C3%A7alay%C4%B1r-6b278a2a3/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:cagdascalayir@outlook.com.tr" aria-label="E-posta gönder"><i class="bi bi-envelope-at-fill"></i></a>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <p class="copyright">
+        2026 — <strong>Çağdaş Çalayır</strong> tarafından <i class="bi bi-heart-fill text-danger"></i> ile hazırlandı.
+      </p>
     </div>
-</footer>
+  </footer>
 
-
-
-
-  
   <!-- Bootstrap JS (Body sonuna) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  
+
 </body>
 </html>

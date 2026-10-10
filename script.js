@@ -13,12 +13,12 @@ fetch('projects.json')
             // Güvenli içerik oluşturma
             col.innerHTML = `
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="" class="card-img-top project-img" style="height: 350px; object-fit: cover;">
+                    <img src="" class="card-img-top project-img" loading="lazy" width="900" height="600">
                     <div class="card-body d-flex flex-column">
                         <span class="badge bg-info align-self-start mb-3 project-tag"></span>
-                        <h5 class="card-title project-title"></h5>
-                        <p class="card-text text-muted project-desc" style="font-size: 0.9rem;"></p>
-                        <a href="" target="_blank" class="btn btn-outline-dark btn-sm mt-auto align-self-end project-link">GitHub'da Gör</a>
+                        <h3 class="card-title project-title"></h3>
+                        <p class="card-text text-muted project-desc"></p>
+                        <a href="" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm mt-auto align-self-end project-link">GitHub'da Gör</a>
                     </div>
                 </div>
             `;
@@ -53,7 +53,7 @@ fetch('skills.json')
             // Kart şablonunu oluştur (Liste kısmı boş)
             col.innerHTML = `
                 <div class="skill-card">
-                    <h5 class="skill-title mb-3"></h5>
+                    <h3 class="skill-title"></h3>
                     <ul class="skill-list"></ul>
                 </div>
             `;
@@ -82,3 +82,15 @@ fetch('skills.json')
         skillsContainer.appendChild(fragment);
     })
     .catch(error => console.error('Skills yüklenirken hata:', error));
+
+
+// Mobilde menüden bir linke tıklanınca açık menüyü kapat
+const navbarCollapse = document.getElementById('navbarNav');
+
+navbarCollapse.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        if (navbarCollapse.classList.contains('show')) {
+            bootstrap.Collapse.getOrCreateInstance(navbarCollapse).hide();
+        }
+    });
+});
