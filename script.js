@@ -40,6 +40,77 @@ fetch('projects.json')
     .catch(error => console.error('Hata:', error));
 
 
+fetch('experience.json')
+    .then(response => response.json())
+    .then(data => {
+        const experienceContainer = document.getElementById('experience-container');
+        const fragment = document.createDocumentFragment();
+
+        data.forEach(job => {
+            const col = document.createElement('div');
+            col.className = 'col-lg-10';
+
+            col.innerHTML = `
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-role"></h3>
+                            <p class="experience-company"><span class="experience-company-name"></span> · <a target="_blank" rel="noopener"></a><span class="experience-location"></span></p>
+                        </div>
+                        <p class="experience-date"></p>
+                    </div>
+                    <p class="experience-summary"></p>
+                    <ul class="skill-list experience-highlights"></ul>
+                    <div class="tech-list"></div>
+                </div>
+            `;
+
+            col.querySelector('.experience-role').textContent = job.role;
+
+            // Şirket adı düz metin, ürün adı LinkedIn sayfasına link
+            col.querySelector('.experience-company-name').textContent = job.company;
+            const productLink = col.querySelector('.experience-company a');
+            productLink.textContent = job.product;
+            productLink.href = job.url;
+
+            col.querySelector('.experience-location').textContent = ' · ' + job.location;
+
+            // Bitiş tarihi yoksa "Devam ediyor" rozeti göster
+            const date = col.querySelector('.experience-date');
+            date.textContent = job.start + ' – ' + (job.end || '');
+            if (!job.end) {
+                const badge = document.createElement('span');
+                badge.className = 'badge current-badge';
+                badge.textContent = 'Devam ediyor';
+                date.appendChild(badge);
+            }
+
+            col.querySelector('.experience-summary').textContent = job.summary;
+
+            const ul = col.querySelector('.experience-highlights');
+            job.highlights.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'skill-item';
+                li.innerHTML = '<i class="bi bi-check2-circle"></i> ';
+                li.appendChild(document.createTextNode(item));
+                ul.appendChild(li);
+            });
+
+            const techList = col.querySelector('.tech-list');
+            job.tech.forEach(tech => {
+                const badge = document.createElement('span');
+                badge.className = 'tech-badge';
+                badge.textContent = tech;
+                techList.appendChild(badge);
+            });
+
+            fragment.appendChild(col);
+        });
+
+        experienceContainer.appendChild(fragment);
+    })
+    .catch(error => console.error('Deneyim yüklenirken hata:', error));
+
 fetch('skills.json')
     .then(response => response.json())
     .then(data => {

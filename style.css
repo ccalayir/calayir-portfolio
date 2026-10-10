@@ -157,6 +157,81 @@ h1, h2, h3, .navbar-brand {
     flex-shrink: 0; /* İkonun yamulmasını engeller */
 }
 
+/* -- DENEYİM KARTI -- */
+
+.experience-card {
+    background-color: #ffffff;
+    border-top: 5px solid var(--secondary-color);
+    padding: 1.8rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobilde alt alta, geniş ekranda rol solda tarih sağda */
+.experience-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+    .experience-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+.experience-role {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+}
+
+.experience-company {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.experience-company a {
+    color: var(--secondary-color);
+}
+
+.experience-location {
+    font-weight: 400;
+    color: #6c757d;
+}
+
+.experience-date {
+    font-size: 0.9rem;
+    color: #6c757d;
+    white-space: nowrap;
+    margin-bottom: 0;
+}
+
+.current-badge {
+    background-color: var(--accent-color);
+    margin-left: 0.5rem;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-badge {
+    background-color: rgba(0, 169, 165, 0.12); /* --accent-color'ın açık tonu */
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+}
+
 /* -- PROJE KARTLARI -- */
 
 .card {

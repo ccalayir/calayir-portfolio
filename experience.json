@@ -1,0 +1,19 @@
+[
+  {
+    "role": "Yazılım Geliştirme Stajyeri – Analiz Ekibi",
+    "company": "İstar Araştırma",
+    "product": "Databeeg",
+    "url": "https://www.linkedin.com/company/databeeg/",
+    "location": "Uzaktan",
+    "start": "Temmuz 2026",
+    "end": null,
+    "summary": "Yaz stajı olarak başladığım ve dönem içinde de devam ettiğim stajımda, Databeeg'in analiz ekibinde nicel analiz modüllerinin geliştirilmesi ve test edilmesinde aktif rol alıyorum.",
+    "highlights": [
+      "Rasch Analizi modülünü, Winsteps'i referans alarak yazılıma sıfırdan geliştirdim.",
+      "Kaplan-Meier, t ve F testleri, korelasyon ve PROCESS Macro gibi istatistiksel analizlerin kontrol ve testlerini yapıyorum.",
+      "Analiz sonuçlarını referans programların çıktılarıyla karşılaştırarak hesaplamaların doğruluğunu doğruluyorum.",
+      "Hesaplama sonuçlarını frontend'de gösterilecek şekilde hazırlıyorum."
+    ],
+    "tech": ["Python", "R", "pytest"]
+  }
+]
