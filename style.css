@@ -63,7 +63,7 @@ body {
 }
 
 #about p.lead {
-    font-family: 'Playfair Display', serif; /* Karizmatik başlık fontun */
+    font-family: 'Lora', serif; /* Karizmatik başlık fontun */
     font-size: 2.2rem;
     color: var(--text-color);
 }
@@ -143,7 +143,7 @@ body {
 
 .skill-title {
     color: var(--primary-color);
-    font-family: 'Playfair Display', serif;
+    font-family: 'Lora', serif;
     font-weight: 700;
     font-size: 1.2rem;
     border-bottom: 1px solid #eee; /* Başlığın altına ince bir çizgi */
@@ -205,7 +205,7 @@ footer {
 }
 
 .footer-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Lora', serif;
     color: #ffffff !important; /* Başlığı beyaz yapalım ki parlasın */
     font-size: 2rem;
     margin-bottom: 15px;

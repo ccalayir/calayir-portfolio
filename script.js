@@ -82,7 +82,3 @@ fetch('skills.json')
         skillsContainer.appendChild(fragment);
     })
     .catch(error => console.error('Skills yüklenirken hata:', error));
-
-
-    const spinner = document.getElementById('loading-spinner');
-const container = document.getElementById('projects-container');
