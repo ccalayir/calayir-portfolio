@@ -8,16 +8,17 @@ fetch('projects.json')
         
         data.forEach(project => {
             const col = document.createElement('div');
-            col.className = 'col-md-6 col-lg-4';
+            col.className = 'col-md-6 col-lg-5';
 
             // Güvenli içerik oluşturma
             col.innerHTML = `
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="" class="card-img-top project-img" loading="lazy" width="900" height="600">
+                    <img src="" class="card-img-top project-img" loading="lazy" width="900" height="675">
                     <div class="card-body d-flex flex-column">
-                        <span class="badge bg-info align-self-start mb-3 project-tag"></span>
+                        <span class="badge align-self-start mb-3 project-tag"></span>
                         <h3 class="card-title project-title"></h3>
                         <p class="card-text text-muted project-desc"></p>
+                        <div class="tech-list mb-3"></div>
                         <a href="" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm mt-auto align-self-end project-link">GitHub'da Gör</a>
                     </div>
                 </div>
@@ -30,6 +31,14 @@ fetch('projects.json')
             col.querySelector('.project-title').textContent = project.title;
             col.querySelector('.project-desc').textContent = project.description;
             col.querySelector('.project-link').href = project.github;
+
+            const techList = col.querySelector('.tech-list');
+            project.tech.forEach(tech => {
+                const badge = document.createElement('span');
+                badge.className = 'tech-badge';
+                badge.textContent = tech;
+                techList.appendChild(badge);
+            });
 
             fragment.appendChild(col);
         });

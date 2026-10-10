@@ -243,15 +243,13 @@ h1, h2, h3, .navbar-brand {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Görseller 4:3 hazırlandı; oran sabit olduğu için hiçbir ekranda kırpılmaz */
 .project-img {
-    height: 250px;
+    height: auto; /* HTML'deki height="675" değerini ezer, oran aspect-ratio'dan gelir */
+    aspect-ratio: 4 / 3;
     object-fit: cover;
-}
-
-@media (min-width: 768px) {
-    .project-img {
-        height: 350px;
-    }
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
 }
 
 .card-title {
@@ -263,6 +261,11 @@ h1, h2, h3, .navbar-brand {
 
 .project-desc {
     font-size: 0.9rem;
+}
+
+.project-tag {
+    background-color: var(--secondary-color);
+    text-transform: capitalize;
 }
 
 /* Koyu yeşil zemin + beyaz yazı: okunur kontrast */

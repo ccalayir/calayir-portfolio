@@ -1,37 +1,18 @@
 [
   {
-    "title": "ESHOT Durak Takip ve Bilgi Sistemi",
-    "description": "Bu proje, İzmir Büyükşehir Belediyesi (ESHOT) açık veri servislerini kullanarak geliştirilmiş; durak bazlı canlı otobüs takibi, harita entegrasyonu ve tahmini varış süresi hesaplayan bir Full-Stack web uygulamasıdır.",
-    "tag": "full-stack",
-    "image": "assets/photos/eshot-durak.webp",
-    "github": "https://github.com/ccalayir/otobus-duraklari"
-    
-  },
-
-    {
     "title": "İzmir İtfaiyesi Vaka ve Durum Analizi",
-    "description": "İzmir İtfaiyesi'nin arama kurtarma ve trafik kazası müdahale verileri incelenerek müdahale süreleri analiz edilmiş ve makine  öğrenmesi teknikleriyle varış süresi tahmin modeli geliştirilmiştir.",
+    "description": "İzmir İtfaiyesi'nin arama kurtarma ve trafik kazası müdahale verileri incelenerek müdahale süreleri analiz edilmiş ve makine öğrenmesi teknikleriyle varış süresi tahmin modeli geliştirilmiştir.",
     "tag": "veri bilimi",
-    "image": "assets/photos/foto2.webp",
+    "tech": ["Python", "Pandas", "scikit-learn", "Seaborn", "Matplotlib"],
+    "image": "assets/photos/itfaiye-isi-haritasi.webp",
     "github": "https://github.com/ccalayir/izmir-itfaiye-veri-analizi"
-    
   },
-
-    {
+  {
     "title": "A-Star Algoritması ile İzmir Su Dağıtım Ağı Optimizasyonu",
-    "description": "Bu proje, Yapay Zekâ dersi kapsamında geliştirilmiştir. Çalışmanın temel amacı, İzmir metropol alanının su dağıtım şebekesini bir arama problemi olarak modellemek ve A* (A-Star) algoritmasını kullanarak suyu en düşük maliyetle hedefe ulaştırmaktır. Günümüzde su kaynakları yönetiminin, mesafe ve yükseklik farkları gibi nedenlerle ciddi bir işletme maliyeti oluşturması problemi, bu çalışmanın çıkış noktasını oluşturmaktadır.",
-    "tag": "algoritma",
-    "image": "assets/photos/foto3.webp",
+    "description": "Yapay Zekâ dersi kapsamında İzmir'in su dağıtım şebekesi bir graf olarak modellenmiş; A* algoritmasıyla mesafe ve işletme maliyetleri hesaba katılarak barajlardan şehir merkezine en düşük maliyetli rota bulunmuştur.",
+    "tag": "yapay zeka",
+    "tech": ["Python", "NetworkX", "Matplotlib"],
+    "image": "assets/photos/astar-rota.webp",
     "github": "https://github.com/ccalayir/a-star-projesi"
-    
-  },
-
-    {
-    "title": "N Tuttu - Gelir/Gider Takip Uygulaması",
-    "description": "Günlük gelir ve giderlerinizi takvim üzerinden kolayca takip edebileceğiniz, Flutter ile geliştirilmiş modern bir kişisel finans uygulaması.",
-    "tag": "mobil programlama",
-    "image": "assets/photos/ntuttu.webp",
-    "github": "https://github.com/ccalayir/n-tuttu-uygulamasi"
-    
   }
 ]
